@@ -12,22 +12,58 @@
   </head>
   <body>
     <div class="interface">
-    <center> <h1 id="title"> Steam Buddies </h1></center>
+    <center> <h1 id="title"> Steam Buds</h1></center>
     <center>
+              <!-- should find a better place for search form, also search is currently working -->
 
-      <form method="get" action="http://store.steampowered.com/search/?snr=1_4_4__12&term=" id="searchbox">
+                <!-- comment out old search for now -->
+
+      <!-- <form method="get" action="http://store.steampowered.com/search/?snr=1_4_4__12&term=" id="searchbox">
       <input type="text" class="text" id="term" name="displayterm" onfocus="if(this.value=='enter game title'){this.value=''}" onchange="$('realterm').value= (this.value=='enter game title') ? '' : this.value" onblur="if(this.value==''){this.value='enter game title';}" value="enter game title" maxlength="64" autocomplete="off">
-      <!-- <input type="submit" value="Game Search" /> -->
       <button class="btn btn-primary" name="search">Find Games</button>
-      </form>
+      </form> -->
 
   </center>
 
-
-      <center> <button class="btn btn-primary btn-lg" name="button">Find Buddies</button>
+                    <!-- old button layout -->
+      <!-- <center> <button class="btn btn-primary btn-lg" name="button">Find Buddies</button>
         <form method="get" action="http://steamcommunity.com/id/steviethewizard/friends/coplay/" id="recent">
        <button class="btn btn-primary btn-lg" name="recentbutton" >Recent Buddies</button></center>
-     </form>
+     </form> -->
   </div>
+
+  <nav class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Steam Buds</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Find Buds <span class="sr-only">(current)</span></a></li>
+
+          <!-- placeholder for player recently played with my own recent list -->
+          <li><a href="http://steamcommunity.com/id/steviethewizard/friends/coplay/">Recent Buds</a></li>
+        </ul>
+        <form class="navbar-form navbar-left" role="search">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search Games">
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">About</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
   </body>
 </html>
